@@ -120,3 +120,7 @@ crawler/common
 # for java
 *.class
 */target/*
+
+# for vim
+*.vim/*
+
