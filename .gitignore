@@ -123,4 +123,8 @@ crawler/common
 
 # for vim
 *.vim/*
+*/.vim/*
+
+# for jetbrain
+*/*.iml
 
