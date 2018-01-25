@@ -1,0 +1,8 @@
+
+src/main/java/com/wxnacy/spring/Application.java
+src/main/java/com/wxnacy/spring/UserController.java
+src/main/java/com/wxnacy/spring/UserRepository.java
+src/main/java/com/wxnacy/spring/bean/Screen.java
+src/main/java/com/wxnacy/spring/bean/User.java
+src/main/java/com/wxnacy/spring/controller/ScreenController.java
+src/main/java/com/wxnacy/spring/repository/ScreenRepository.java

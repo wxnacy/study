@@ -2,10 +2,10 @@
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.wxnacy.spring</groupId>
-    <artifactId>SpringBoot-JPA</artifactId>
+    <artifactId>TMD</artifactId>
     <packaging>jar</packaging>
     <version>1.0-SNAPSHOT</version>
-    <name>SpringBoot-JPA</name>
+    <name>TMD</name>
     <url>http://maven.apache.org</url>
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -27,6 +27,11 @@
             <scope>test</scope>
         </dependency>
         <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
         </dependency>
@@ -39,6 +44,13 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <!-- <dependencies> -->
+                    <!-- <dependency> -->
+                        <!-- <groupId>org.springframework</groupId> -->
+                        <!-- <artifactId>springloaded</artifactId> -->
+                        <!-- <version>1.2.6.RELEASE</version> -->
+                    <!-- </dependency> -->
+                <!-- </dependencies> -->
             </plugin>
         </plugins>
     </build>
