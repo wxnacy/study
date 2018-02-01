@@ -1,0 +1,10 @@
+{
+  "name": "pyexecjs_demo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "Q": "^1.0.0",
+    "uglify-js": "^3.3.9"
+  }
+}
