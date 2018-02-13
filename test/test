@@ -1,0 +1,6 @@
+chrome --headless --disable-gpu https://wxnacy.com
+chrome --headless --disable-gpu --remote-debugging-port=9222 https://wxnacy.com
+chrome --headless --disable-gpu --screenshot https://wxnacy.com
+chrome --headless --disable-gpu --screenshot --window-size=1280,1696 https://wxnacy.com
+chrome --headless --disable-gpu --repl https://wxnacy.com
+chrome  https://wxnacy.com
