@@ -128,3 +128,5 @@ crawler/common
 # for jetbrain
 */*.iml
 
+# for other
+*/winn/*
