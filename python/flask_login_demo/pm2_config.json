@@ -1,0 +1,8 @@
+{
+    "apps" : [{
+        "name"        : "flask_login_demo",
+        "script"      : "./run.py",
+        "interpreter" : "/Users/wxnacy/.pyenv/shims/python",
+        "watch"       : true,
+    }]
+}

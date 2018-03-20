@@ -124,18 +124,41 @@ class Shop(db.Model):
 
 def get_single_screen(**kwargs):
     print(kwargs)
-    #  return kwargs
     kwargs.update(dict(is_available=0))
+
+def get_resource(**kwargs):
+    print(kwargs)
+
+def get_single_result(result):
+    print(result)
+    result['sss'] = 'ss'
+
+def preprocessor(**kw):
+    print(kw)
+
+
+def fetch_preprocessor(filters=None, sort=None, group_by=None, single=None,
+                       **kw):
+    print(kw)
 
 #  ,url_prefix='/api'
 screen_include = ['id', 'code', 'is_available',  'mac', 'create_ts', 'shop', 'shop.id', 'shop.code']
 screen_api_params = dict(
     methods=['GET'], include_columns=screen_include, results_per_page=2,
-    preprocessors={"GET_SINGLE": [get_single_screen]},
+    preprocessors={
+        "GET_SINGLE": [preprocessor],
+        "GET_MANY": [preprocessor],
+        "GET_RESOURCE": [preprocessor],
+        'GET_COLLECTION': [preprocessor]
+    },
+    postprocessors={
+        "GET_SINGLE": [get_single_result],
+        "GET_MANY": [postprocessor],
+    },
     allow_functions=True
-        )
+)
 manager.create_api(Screen, **screen_api_params)
 shop_include = ['id', 'code', 'name', 'create_ts']
 manager.create_api(Shop, methods=['GET'], include_columns=shop_include)
 
-app.run()
+app.run(debug=True)

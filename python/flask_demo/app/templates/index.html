@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+<body>
+  {% if current_user.is_authenticated %}
+    Hello {{ current_user.name }}!
+  {% else %}
+    Hello World
+  {% endif %}
+</body>
+</html>

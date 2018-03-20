@@ -1,0 +1,5 @@
+[api_prod]
+34.217.110.132 ansible_ssh_user=ec2-user ansible_ssh_private_key_file=~/.ssh/zebin_oregon_ami.pem
+
+[sche_prod]
+54.245.40.22 ansible_ssh_user=ec2-user ansible_ssh_private_key_file=~/.ssh/zebin_oregon_ami.pem

@@ -1,0 +1,7 @@
+- hosts: api_prod
+  tasks:
+  - name: deploy
+    shell: ./deploy_api.sh '{{tag_name}}'
+    args:
+      chdir: ~/tmd
+

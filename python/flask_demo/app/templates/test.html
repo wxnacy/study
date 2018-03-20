@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<link rel="stylesheet" href="/static/css/editormd.min.css"/>
+</head>
+<body>
+{{ md }}
+</body>
+<script src="/static/js/jquery.js"></script>
+<script src="/static/js/jquery.min.js"></script>
+<script src="/static/js/editormd.min.js"></script>
+<script src="/static/js/marked.js"></script>
+<script>
+    $(function () {
+        $.ajax({
+            url:'/restful/article/1',
+            success:function (data) {
+                console.log(data)
+                var md = data['content'];
+                console.log(md)
+                console.log(marked(md));
+                document.write(marked(md));
+            }
+        });
+        $.ajax({
+            url:'/static/file/hsybs.json',
+            success:function (data) {
+                console.log(data)
+            }
+        });
+
+{#        var md = '{{ md }}'#}
+{#        ```#}
+{#<dependency>#}
+{#	<groupId>net.easyjava</groupId>#}
+{#	<artifactId>easyjava-tools</artifactId>#}
+{#	<version>[1.0.0,2.0.0]</version>#}
+{#</dependency>#}
+{#```#}
+{##}
+{#        document.write(marked(md));#}
+{#        console.log(marked(md));#}
+{#        console.log(md)#}
+    })
+</script>
+</html>
