@@ -32,13 +32,11 @@ class Test(unittest.TestCase):
         self.assertEqual(3, self.divide())
 
 if __name__ == "__main__":
-    #  unittest.main(verbosity=2)
-    #  HTMLTestRunner.main()
     suite = unittest.TestSuite()
     suite.addTests(unittest.TestLoader().loadTestsFromTestCase(Test))
     fp = open('my_report.html', 'wb')
     runner = HTMLTestRunner.HTMLTestRunner(
         stream=fp, title='My unit test',
-                description='This demonstrates the report output by HTMLTestRunner.'
-                )
+        description='This demonstrates the report output by HTMLTestRunner.'
+    )
     runner.run(suite)
