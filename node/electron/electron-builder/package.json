@@ -1,0 +1,21 @@
+{
+  "name": "electron-builder",
+  "version": "1.0.0",
+  "main": "main.js",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^2.0.0",
+    "electron-builder": "^20.13.3"
+  },
+  "scripts":{
+    "start": "electron .",
+    "dist": "electron-builder",
+    "pack": "electron-builder --dir"
+  },
+  "build": {
+    "appId": "com.wxnacy.electron-builder.demo",
+    "mac": {
+      "category": "wxnacy, builder"
+    }
+  }
+}

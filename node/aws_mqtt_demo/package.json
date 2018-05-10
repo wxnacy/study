@@ -9,7 +9,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "aws-mqtt": "^0.2.2",
-    "aws-sdk": "^2.236.1"
+    "aws-iot-device-sdk": "^2.2.1"
+  },
+  "devDependencies": {
   }
 }
