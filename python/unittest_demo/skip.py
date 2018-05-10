@@ -29,4 +29,4 @@ class Test(unittest.TestCase):
         self.assertEqual(3, self.add())
 
 if __name__ == "__main__":
-    unittest.main()
+    unittest.main(verbosity=2)

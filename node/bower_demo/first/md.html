@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+<link rel="stylesheet" href="bower_components/github-markdown-css/github-markdown.css">
+</head>
+<body>
+  <div id="content"></div>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script>
+    document.getElementById('content').innerHTML =
+      marked('# Marked in the browser\n```python\nname = "wxnacy"\n```\n\nRendered by **marked**.');
+  </script>
+</body>
+</html>

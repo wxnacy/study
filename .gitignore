@@ -95,14 +95,20 @@ ENV/
 .idea/
 .npmignore
 .serverless/
-node_modules/
 */.serverless/
-*/node_modules/
 */.cache/
 */local_config.py
 api/test/winn*
 winn*
 # add by wenxiaoning end
+
+# for node begin
+*/node_modules/
+node_modules/
+*/*.lock
+*.lock
+
+# for node end
 
 
 # Spyder project settings

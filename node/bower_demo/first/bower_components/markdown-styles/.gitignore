@@ -1,0 +1,5 @@
+node_modules/
+output/*
+!output/menu.html
+!output/index.html
+.DS_Store

@@ -1,0 +1,15 @@
+{
+  "name": "markdown-styles",
+  "homepage": "https://github.com/mixu/markdown-styles",
+  "version": "3.1.10",
+  "_release": "3.1.10",
+  "_resolution": {
+    "type": "version",
+    "tag": "v3.1.10",
+    "commit": "ef97708c1cc9ac21eff4a97948d6920a3efedd1c"
+  },
+  "_source": "https://github.com/mixu/markdown-styles.git",
+  "_target": "^3.1.10",
+  "_originalSource": "mixu/markdown-styles",
+  "_direct": true
+}
