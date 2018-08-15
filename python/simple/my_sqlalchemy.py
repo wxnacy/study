@@ -95,3 +95,8 @@ res = engine.execute(text("insert into book (name) values (:name)"),
 res = engine.execute(text("select sum(id) from book")).fetchall()
 print(res)
 
+#  res = session.query().filter(text("id < 30")).paginate(1, 2, False)
+#  res = session.query.filter(text("id < 30")).all()
+
+res = session.query(Book).filter_by().paginate(1, 2, False)
+print(res)
