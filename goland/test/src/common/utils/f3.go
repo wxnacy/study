@@ -1,9 +1,9 @@
 package utils
 
 import (
-    "fmt"
+	"fmt"
 )
 
 func Func3() {
-    fmt.Println("this is Func3")
+	fmt.Println("this is Func3")
 }

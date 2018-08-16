@@ -1,8 +1,8 @@
 const awsIot = require('aws-iot-device-sdk')
 // https://github.com/aws/aws-iot-device-sdk-js
 
-AWS_MQTT_ACCESS_KEY_ID = 'AKIAJGY4DNP7MGYLOFKQ'
-AWS_MQTT_SECRET_ACCESS_KEY = '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'
+AWS_MQTT_ACCESS_KEY_ID = ''
+AWS_MQTT_SECRET_ACCESS_KEY = ''
 AWS_MQTT_ENDPOINT = 'a3bdyb5rk1w4po.iot.us-west-2.amazonaws.com'
 AWS_MQTT_REGION = 'us-west-2'
 
