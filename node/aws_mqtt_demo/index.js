@@ -4,7 +4,7 @@ const awsIot = require('aws-iot-device-sdk')
 AWS_MQTT_ACCESS_KEY_ID = ''
 AWS_MQTT_SECRET_ACCESS_KEY = ''
 AWS_MQTT_ENDPOINT = ''
-AWS_MQTT_REGION = 'us-west-2'
+AWS_MQTT_REGION = ''
 
 
 const device = awsIot.device({
