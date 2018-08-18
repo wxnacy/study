@@ -9,3 +9,6 @@ PyMySQL == 0.7.9
 
 # my_sqlalchemy.py: 8,9,10,11,12
 SQLAlchemy == 1.1.5
+
+# rsa_encrypt.py: 6,7,8,9,10
+pycrypto == 2.6.1

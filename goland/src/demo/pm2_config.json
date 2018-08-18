@@ -1,0 +1,7 @@
+{
+    "apps" : [{
+        "name"        : "godemo",
+        "script"      : "./main.go",
+        "interpreter" : "/usr/local/bin/go run",
+    }]
+}
