@@ -10,6 +10,6 @@ export PATH=$PATH:$GOPATH/bin
 
 gofmt -w src
 
-go install first
+go install wmovie
 
 echo 'finished'

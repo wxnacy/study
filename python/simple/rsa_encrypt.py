@@ -65,13 +65,16 @@ if __name__ == "__main__":
     pub_rsa_path = '/Users/wxnacy/.ssh/id_rsa.pub'
     rsa_path = '/Users/wxnacy/.ssh/id_rsa'
 
+    sign_pub_rsa_path = '/Users/wxnacy/.ssh/test_gmail_rsa.pub'
+    sign_rsa_path = '/Users/wxnacy/.ssh/test_gmail_rsa'
+
     print('明文：', plain)
     secret = encrypt(plain, pub_rsa_path)
     print('加密文：', secret)
     text = decrypt(secret, rsa_path)
     print('解密文：', text)
 
-    sign = signature(plain, rsa_path)
+    sign = signature(plain, sign_rsa_path)
     print('签名：', sign)
-    flag = verify_signature(plain, sign, pub_rsa_path)
+    flag = verify_signature(plain, sign, sign_pub_rsa_path)
     print('验证结果：', flag)
