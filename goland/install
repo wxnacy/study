@@ -8,8 +8,8 @@ fi
 export GOPATH=`pwd`
 export PATH=$PATH:$GOPATH/bin
 
-gofmt -w src
+gofmt -w src/gin_demo
 
-go install wmovie
+go install gin_demo
 
 echo 'finished'

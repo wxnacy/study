@@ -1,6 +1,0 @@
-#!/usr/bin/env bash
-
-
-echo `pwd`
-# export GOPATH=`pwd`
-

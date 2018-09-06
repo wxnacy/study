@@ -2,30 +2,41 @@ package main
 
 import "fmt"
 
-func main(){
-    If()
-    Switch()
+func main() {
+	If()
+	If1()
+	Switch()
 }
 
-func If(){
-    a := 1
-    if a > 0 {
-        fmt.Println("> 0")
-    } else {
-        fmt.Println("< 0")
-    }
+func If() {
+	a := 1
+	if a > 0 {
+		fmt.Println("> 0")
+	} else {
+		fmt.Println("< 0")
+	}
 }
 
-func Switch(){
-    a := 1
-    var c string
+func If1() {
+    if a := 1;a > 0 {
+		fmt.Println("> 0")
+	} else {
+		fmt.Println("< 0")
+	}
+}
 
-    switch a {
-        case 1: c = "1"
-        case 2: c = "2"
-        default: 
+func Switch() {
+	a := 1
+	var c string
+
+	switch a {
+        case 1:
+            c = "1"
+        case 2:
+            c = "2"
+        default:
             c = "default"
-    }
+	}
 
-    fmt.Println(c)
+	fmt.Println(c)
 }
