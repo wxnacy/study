@@ -5,14 +5,17 @@ import (
     "time"
 )
 
+func PrintNum(a int) {
+    fmt.Println(a)
+}
+
 func main() {
-    count := 0
     var c = make(chan int, 1)
-    for i := 0; i < 10; i++ {
+    for i := 0; i < 5; i++ {
+        time.Sleep(200 * time.Millisecond)
         go func() {
-            time.Sleep(1 * time.Second)
-            count++
-            if count == 10 {
+            PrintNum(i)
+            if i == 4 {
                 c <- 1
             }
         }()
