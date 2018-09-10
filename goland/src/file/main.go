@@ -4,15 +4,18 @@ import (
     "fmt"
     "os"
     "log"
+    "io"
 )
 
 func main() {
-    fmt.Println("Hello World") 
-    f, _ := os.OpenFile("message")
-    b := make([]byte, 0)
+    f, err := os.Open("message")
+    if err != nil {
+		log.Fatal(err)
+	}
+    b := make([]byte, 8)
 
     if _, err := io.ReadFull(f, b); err != nil {
 		log.Fatal(err)
 	}
-    fmt.Println(b)
+    fmt.Printf("%s\n", b)
 }
