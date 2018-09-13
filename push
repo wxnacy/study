@@ -3,27 +3,16 @@
 # __author__ = "wenxiaoning(wenxiaoning@gochinatv.com)"
 # __copyright__ = "Copyright of GoChinaTV (2017)."
 
-MSG=$1
-
-
+MSG=$*
 
 push(){
     echo '******************************'
     echo '********开始push api：'
     echo '******************************'
-    git add . && git commit -m ${MSG} && git push
+    git add . && git commit -m "${MSG}" && git push
     echo '******************************'
     echo '********部署成功'
     echo '******************************'
 }
 
-main(){
-    if [ ! ${MSG} ]
-    then
-        echo 'UAGE: ./winn_push.sh <string:commit msg>'
-    else
-        push
-    fi
-}
-
-main
+push

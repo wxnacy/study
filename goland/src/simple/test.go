@@ -8,6 +8,9 @@ import (
     "io"
 )
 
+var ss = fmt.Sprintf(`%s
+`, "wxnacy")
+
 func main() {
 
     // fileInfo, _ := os.Stdin.Stat()
@@ -17,6 +20,7 @@ func main() {
     s := bufio.NewScanner(os.Stdin)
     _ = s
 
+    fmt.Println(ss)
 
 	h := md5.New()
 	if _, err := io.Copy(h, os.Stdin); err != nil {
