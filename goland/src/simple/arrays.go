@@ -79,6 +79,12 @@ func main() {
     copy(l, n)
     fmt.Println(l)
 
+
+    var o = []int{1, 3}
+    fmt.Printf("before insert %s", o)
+    o = Insert(o, 1, 2)
+    fmt.Printf("after insert %s", o)
+
 }
 
 func Test(a []int) {
@@ -87,4 +93,17 @@ func Test(a []int) {
 
 func Remove(slice []int, s int) []int {
     return append(slice[:s], slice[s+1:]...)
+}
+
+func Insert(slice []int, i int, item int) []int{
+    newSlice := make([]int, 0)
+    if i > 0 {
+        newSlice = append(newSlice, slice[:i]...)
+    }
+
+    newSlice = append(newSlice, item)
+    fmt.Println(newSlice)
+    newSlice = append(newSlice, slice[i:]...)
+    fmt.Println(newSlice)
+    return newSlice
 }
