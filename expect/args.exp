@@ -1,0 +1,5 @@
+#!/usr/bin/env expect
+
+puts $argc
+puts $argv
+puts [lindex $argv 0]
