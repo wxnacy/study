@@ -9,10 +9,13 @@ var (
    input = "56.12 / 5212 / Go"
    format = "%f / %d / %s"
 )
+var name string
 
 func main() {
    fmt.Println("Please enter your full name: ")
    fmt.Scanln(&firstName, &lastName)
+   fmt.Println("Please enter your full name: ")
+   fmt.Scanln(&name)
    // fmt.Scanf("%s %s", &firstName, &lastName)
    fmt.Printf("Hi %s %s!\n", firstName, lastName) // Hi Chris Naegels
    fmt.Sscanf(input, format, &f, &i, &s)

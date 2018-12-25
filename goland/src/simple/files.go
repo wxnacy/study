@@ -6,10 +6,27 @@ import (
 	"os"
 )
 
+func checkErr(err error) {
+    if err != nil {
+        panic(err)
+    }
+}
+
 func main() {
-	Func1()
-    exists := Exists("file.go")
-    fmt.Println(exists)
+
+	// Func1()
+    // exists := Exists("file.go")
+    // fmt.Println(exists)
+
+    f, err := os.Create("test")
+    checkErr(err)
+    f.WriteString("ww")
+    f.Close()
+    fmt.Println(os.Getenv("HOME"))
+    err = os.MkdirAll("/Users/wxnacy/.tm/credentials", os.ModePerm)
+    // err := os.MkdirAll("sss", os.ModePerm)
+    fmt.Println(err)
+    os.Remove("test")
 }
 
 func Func1() {
@@ -50,3 +67,5 @@ func IsDir(path string) bool {
 // 判断所给路径是否为文件
 func IsFile(path string) bool {
 	return !IsDir(path)
+}
+

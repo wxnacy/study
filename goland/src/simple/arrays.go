@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+    "fmt"
+    "reflect"
+)
 
 func main() {
     var i []int     // []
@@ -85,6 +88,8 @@ func main() {
     o = Insert(o, 1, 2)
     fmt.Printf("after insert %s", o)
 
+
+
 }
 
 func Test(a []int) {
@@ -106,4 +111,20 @@ func Insert(slice []int, i int, item int) []int{
     newSlice = append(newSlice, slice[i:]...)
     fmt.Println(newSlice)
     return newSlice
+}
+
+func inArray(val interface{}, array ...interface{}) (index int) {
+    index = -1
+
+    switch reflect.Type(array).Kind() {
+        case reflect.Slice: {
+            s := reflect.ValueOf(array)
+            for i := 0; i < s.Len(); i++ {
+                if reflect.DeepEqual(val, s.Index(i).Interface()) {
+                    index = i
+                }
+            }
+        }
+    }
+    return
 }

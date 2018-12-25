@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link ref="import" href="import.html"/>
+</head>
+<body>
+    Hello World
+    <script>
+        var link = document.querySelector('link[ref="import"]')
+        var content = link.import;
+        var ele = content.querySelector('head');
+        document.body.appendChild(ele.cloneNode(true));
+    </script>
+</body>
+</html>

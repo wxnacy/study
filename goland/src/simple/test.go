@@ -2,16 +2,32 @@ package main
 
 import (
     "fmt"
-    "reflect"
+    "net/http"
+    "io/ioutil"
+    "strconv"
 )
 
-func main() {
-    fmt.Println("Hello World") 
-    fmt.Println( float64(101) / 2 )
-    a := float64(101) / 2
-    // fmt.Println( int(float64(33) / 345 * 20))
-    fmt.Println( 101 % 2 )
-    fmt.Println(reflect.TypeOf(a))
-
-    fmt.Println(fmt.Sprintf("%.0f", 1.9))
+type User struct {
+    id int
 }
+
+
+func main() {
+
+    // client := http.DefaultClient()
+
+    client := http.Client{}
+
+    req, _ := http.NewRequest("GET", "http://mewevideo.oss-cn-beijing.aliyuncs.com/backup/1533869500000tyKnra.mp4", nil)
+    req.Header.Set("Range", "bytes=0-512")
+
+    res, _ := client.Do(req)
+    body, _ := ioutil.ReadAll(res.Body)
+    fmt.Println(body)
+    for _, d := range body {
+        fmt.Println(strconv.QuoteRune(d))
+    }
+    // fmt.Println(string(body))
+
+}
+

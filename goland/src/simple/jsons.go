@@ -25,6 +25,9 @@ func main() {
 	var d map[string]interface{}
 	// 将字符串反解析为字典
 	json.Unmarshal([]byte(s), &d)
+    m, _ := json.MarshalIndent(d, "", "    ")
+
+    fmt.Println(string(m))
 	fmt.Println(d) // map[id:1 name:wxnacy]
 
 	s = `[1, 2, 3, 4]`
