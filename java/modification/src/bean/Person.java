@@ -11,15 +11,17 @@ public class Person {
     }
 
     public String toString() {
-        return "id: " + this.id + " name: " +
-            this.name + " age: " + this.age + " sex: " + this.sex;
+        return "name: " + this.name +
+            "\tid: " + this.id +
+            "\tage: " + this.age +
+            "\t\tsex: " + this.sex;
     }
 
     public void test(){
 
         Person p = new Person();
         p.id = 1;
-        p.name = "I am Person";
+        p.name = "当前类";
         p.age = 28;
         p.sex = 1;
         System.out.println(p.toString());

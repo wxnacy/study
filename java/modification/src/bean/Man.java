@@ -11,7 +11,7 @@ public class Man extends Person {
         // private int id; 在子类中不可使用
         // m.id = 1;
         // error: id has private access in Person
-        m.name = "I am Man";
+        m.name = "子类";
         m.age = 1;
         m.sex = 1;
         System.out.println(m.toString());
