@@ -18,9 +18,6 @@ public class Person {
     public void test(){
 
         Person p = new Person();
-        // private int id; 在外部类中不可使用
-        // p.id = 1;
-        // error: id has private access in Person
         p.id = 1;
         p.name = "I am Person";
         p.age = 28;

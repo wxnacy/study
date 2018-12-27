@@ -1,9 +1,11 @@
 #!/usr/bin/env bash
+MAIN=$1
 SOURCE_PATH=src
 VIM_PROJECT_HOME=./
 TARGET=target
 CLASS_PATH=${TARGET}/classes
 SOURCE_TXT=${VIM_PROJECT_HOME}/.source
+
 list_file(){
     # 遍历源码目录并输出到 ${SOURCE_TXT} 中
     for file in `ls $1`
@@ -31,8 +33,13 @@ compile(){
     rm -rf ${SOURCE_TXT}
     touch ${SOURCE_TXT}
     list_file ${SOURCE_PATH}
-    cat ${SOURCE_TXT}
+    # cat ${SOURCE_TXT}
     javac -cp ${CLASS_PATH} -d ${CLASS_PATH} @${SOURCE_TXT}
 }
 compile
-java -cp ${CLASS_PATH} Main
+
+if [ ! ${MAIN} ]
+then
+    MAIN=Main
+fi
+java -cp ${CLASS_PATH} ${MAIN}
