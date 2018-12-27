@@ -73,6 +73,7 @@ docs/_build/
 
 # PyBuilder
 target/
+*/target/
 # Jupyter Notebook
 .ipynb_checkpoints
 
@@ -100,6 +101,7 @@ ENV/
 */local_config.py
 api/test/winn*
 winn*
+.source
 # add by wenxiaoning end
 
 # for node begin
