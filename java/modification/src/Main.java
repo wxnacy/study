@@ -2,27 +2,25 @@ import bean.*;
 
 public class Main{
     public static void main(String[] args){
-        System.out.println("public\t\tprivate\tprotected\tfriendly");
-        new Person().test();
-        new Other().test();
-        new Main().test();
-        new Man().test();
+        System.out.println("\tpublic\tprivate\tprotected\tfriendly");
+        // new Person().test();
+        System.out.println("当前类" + new Person().test());
+        System.out.println("当前包" + new Other().test());
+        System.out.println("子类" + new Man().test());
+        System.out.println("外部类" + new Main().test());
+        // new Other().test();
+        // new Main().test();
+        // new Man().test();
     }
 
-    public void test(){
+    public String test(){
 
         Person p = new Person();
-        // private int id; 在外部类中不可使用
-        // p.id = 1;
-        // error: id has private access in Person
-        p.name = "外部类";
-        // protected int age; 在外部类中不可使用
-        // p.age = 28;
-        // error: age has protected access in Person
-        // int sex; 在外部类中不可使用
-        // p.sex = 1;
-        // error: sex is not public in Person; cannot be accessed from outside package
-        System.out.println(p.toString());
+        p.n1 = "√";
+        // private String n2; 在外部类中不可使用
+        // protected String n3; 在外部类中不可使用
+        // String n4; 在外部类中不可使用
+        return p.toString();
 
     }
 }
