@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+
+# export GOPATH=`pwd`
+export GOPATH=/Users/wxnacy/PycharmProjects/study/goland
+SOURCE_DIR=image_conver
+# BIN=lu
+
+# CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go install $SOURCE_DIR
+# CGO_ENABLED=0 GOOS=darwin GOARCH=amd64 go install $SOURCE_DIR
+# CGO_ENABLED=0 GOOS=windows GOARCH=amd64 go install $SOURCE_DIR
+go install $SOURCE_DIR
+
+# test -d bin || mkdir bin
+# test -d bin/linux_amd64 || mkdir bin/linux_amd64
+# test -d bin/windows_amd64 || mkdir bin/windows_amd64
+# test -d bin/darwin_amd64 || mkdir bin/darwin_amd64
+
+# cp ${GOPATH}/bin/linux_amd64/$BIN bin/linux_amd64
+# cp ${GOPATH}/bin/windows_amd64/$BIN.exe bin/windows_amd64
+# cp ${GOPATH}/bin/$BIN bin/darwin_amd64
+
+echo 'Install Finshed'
