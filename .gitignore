@@ -139,6 +139,6 @@ crawler/common
 
 # for other
 */winn/*
-*/goland/bin/
-*/goland/pkg/
-*/goland/src/github.com/
+goland/bin/
+goland/pkg/
+goland/src/github.com/
