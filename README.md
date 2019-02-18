@@ -4,8 +4,8 @@
 
 ## Python
 
-- [非对称加密算法原理及实现](python/crypto_demo/)
-- [Python 单例的四种实现方式](python/signletion/)
+- [非对称加密算法原理及实现](https://github.com/wxnacy/study/tree/master/python/crypto_demo)
+- [Python 单例的四种实现方式](https://github.com/wxnacy/study/tree/master/python/singletion)
 
 ## Go
 
