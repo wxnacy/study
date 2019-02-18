@@ -21,6 +21,7 @@ func main() {
     fmt.Printf("Username %s\n", u.Username)
     fmt.Printf("Name %s\n", u.Name)
     fmt.Printf("HomeDir %s\n", u.HomeDir)
+    fmt.Println("")
 
     u, err = user.Lookup("wxnacy")
     handleErr(err)
@@ -30,6 +31,7 @@ func main() {
     fmt.Printf("Username %s\n", u.Username)
     fmt.Printf("Name %s\n", u.Name)
     fmt.Printf("HomeDir %s\n", u.HomeDir)
+    fmt.Println("")
 
     u, err = user.LookupId("501")
     handleErr(err)
@@ -40,4 +42,25 @@ func main() {
     fmt.Printf("Name %s\n", u.Name)
     fmt.Printf("HomeDir %s\n", u.HomeDir)
 
+
+    // 当前用户
+    // Gid 20
+    // Uid 501
+    // Username wxnacy
+    // Name wxnacy
+    // HomeDir /Users/wxnacy
+
+    // 根据 Username wxnacy 查询
+    // Gid 20
+    // Uid 501
+    // Username wxnacy
+    // Name wxnacy
+    // HomeDir /Users/wxnacy
+
+    // 根据 Uid 501 查询
+    // Gid 20
+    // Uid 501
+    // Username wxnacy
+    // Name wxnacy
+    // HomeDir /Users/wxnacy
 }
