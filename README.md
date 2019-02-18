@@ -2,6 +2,11 @@
 
 记录开发学习过程中部分代码的 demo
 
+## Python
+
+- [非对称加密算法原理及实现](python/crypto_demo)
+- [Python 单例的四种实现方式](python/signletion)
+
 ## Go
 
 - [管道输入](https://github.com/wxnacy/study/blob/master/goland/src/args/stdin.go)
