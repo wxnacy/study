@@ -57,3 +57,20 @@
 私钥用来签名，对应公钥验证
 
 ## how
+
+生成秘钥
+
+```bash
+$ ssh-keygen -t rsa -C your_email
+```
+
+安装依赖
+
+```bash
+$ pip install pycrypto
+```
+
+代码
+
+- [加解密](rsa_cipher.py)
+- [签名验证](rsa_signature.py)

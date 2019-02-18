@@ -2,9 +2,7 @@ package main
 
 import (
     "fmt"
-    "net/http"
-    "io/ioutil"
-    "strconv"
+    "strings"
 )
 
 type User struct {
@@ -14,20 +12,10 @@ type User struct {
 
 func main() {
 
-    // client := http.DefaultClient()
+    dir := "/Users/wxnacy/Documents/001.jpg"
+    dirs := strings.Split(dir, "/")
+    fmt.Println(dirs[0:len(dirs)-1])
 
-    client := http.Client{}
-
-    req, _ := http.NewRequest("GET", "http://mewevideo.oss-cn-beijing.aliyuncs.com/backup/1533869500000tyKnra.mp4", nil)
-    req.Header.Set("Range", "bytes=0-512")
-
-    res, _ := client.Do(req)
-    body, _ := ioutil.ReadAll(res.Body)
-    fmt.Println(body)
-    for _, d := range body {
-        fmt.Println(strconv.QuoteRune(d))
-    }
-    // fmt.Println(string(body))
 
 }
 

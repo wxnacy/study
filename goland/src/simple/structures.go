@@ -32,9 +32,10 @@ func main() {
     fmt.Println(d)              // &{1 wxnacy}
 
     h := Human{Msg: "I am a Human"}
-    fmt.Println(h.ToString())
-    m := Man{Human{Msg: "I am a Man"}}
-    fmt.Println(m.ToString())
+    // fmt.Println(h.ToString())
+    fmt.Println(h)
+    // m := Man{Human{Msg: "I am a Man"}}
+    // fmt.Println(m.ToString())
 
     // m1 := Man{Id: 1}
     // m1.Msg = "I am a Man"
@@ -70,6 +71,7 @@ func ChangeUser(u *User) {
 type Human struct {
     Name string
     Msg string
+    IsMan bool
 }
 
 func (this Human) ToString() string {
