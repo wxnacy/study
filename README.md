@@ -18,3 +18,4 @@
     - [带颜色进度条](https://github.com/wxnacy/study/blob/master/goland/src/progress/color.go)
     - [多行进度条](https://github.com/wxnacy/study/blob/master/goland/src/progress/multi.go)
 - [机器用户信息](https://github.com/wxnacy/study/blob/master/goland/src/simple/os_user.go)
+- [了解 interface](https://github.com/wxnacy/study/tree/master/goland/src/interfaces)
