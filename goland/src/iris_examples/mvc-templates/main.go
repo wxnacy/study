@@ -16,6 +16,7 @@ func main() {
         ctx.ViewData("name", "wxnacy")
         ctx.View("index.html")
     })
+
     // listen and serve on http://0.0.0.0:8080.
     app.Run(iris.Addr(":8080"))
 }
