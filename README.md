@@ -6,6 +6,7 @@
 
 - [非对称加密算法原理及实现](https://github.com/wxnacy/study/tree/master/python/crypto_demo)
 - [Python 单例的四种实现方式](https://github.com/wxnacy/study/tree/master/python/singletion)
+- [排序算法](https://github.com/wxnacy/study/tree/master/python/sorts)
 
 ## Go
 
@@ -19,7 +20,4 @@
     - [多行进度条](https://github.com/wxnacy/study/blob/master/goland/src/progress/multi.go)
 - [机器用户信息](https://github.com/wxnacy/study/blob/master/goland/src/simple/os_user.go)
 - [了解 interface](https://github.com/wxnacy/study/tree/master/goland/src/interfaces)
-- Web 框架 iris
-    - [Hello World](https://github.com/wxnacy/study/blob/master/goland/src/iris_examples/hello.go)
-    - [logger](https://github.com/wxnacy/study/blob/master/goland/src/iris_examples/loggers.go)
-    - [mvc-template](https://github.com/wxnacy/study/tree/master/goland/src/iris_examples/mvc-templates)
+- [Web 框架 iris](https://github.com/wxnacy/study/tree/master/goland/src/iris_examples)
