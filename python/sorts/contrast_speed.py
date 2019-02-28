@@ -11,7 +11,7 @@ import time
 
 if __name__ == "__main__":
     length = 1000
-    print('长度为 {} 的数组排序时长对比')
+    print('长度为 {} 的随机数数组排序时长对比'.format(length))
     arr = rand_int_arr(length)
     b = time.clock()
     arr.sort()
