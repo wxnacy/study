@@ -7,6 +7,8 @@
 - [非对称加密算法原理及实现](https://github.com/wxnacy/study/tree/master/python/crypto_demo)
 - [Python 单例的四种实现方式](https://github.com/wxnacy/study/tree/master/python/singletion)
 - [排序算法](https://github.com/wxnacy/study/tree/master/python/sorts)
+- Redis
+    - [使用 watch 完成秒杀活动防止超卖 demo](https://github.com/wxnacy/study/blob/master/python/redis_demo/README.md#%E4%BD%BF%E7%94%A8-watch-%E5%AE%8C%E6%88%90%E7%A7%92%E6%9D%80%E6%B4%BB%E5%8A%A8%E9%98%B2%E6%AD%A2%E8%B6%85%E5%8D%96-demo)
 
 ## Go
 
