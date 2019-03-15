@@ -29,7 +29,7 @@ def sell(i):
     售卖方法
     param: i 用户
     '''
-    with r.pipeline() as pipe:      # 初始化 pipe
+    with r.pipeline() as pipe:              # 初始化 pipe
         while 1:
             try:
                 pipe.watch(KEY)             # 监听库存
