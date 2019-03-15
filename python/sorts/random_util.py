@@ -6,9 +6,7 @@
 import random
 
 
-
 def rand_int_arr(length):
-
     arr = []
     for i in range(length):
         r = random.randrange(1000)
