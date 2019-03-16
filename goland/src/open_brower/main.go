@@ -1,31 +1,34 @@
 package main
-// 打开系统默认浏览器
+// 自动打开系统默认浏览器
+// 1 各个平台打开浏览器的命令是什么
+//      windows     start
+//      darwin      open
+//      linux       xdg-open
+// 2 判断当前所处系统
+// 3 编写代码执行命令
 
 import (
+    "runtime"
     "fmt"
     "os/exec"
-    "runtime"
 )
 
-var commands = map[string]string{
+var CMDS = map[string]string{
     "windows": "start",
-    "darwin":  "open",
-    "linux":   "xdg-open",
+    "darwin": "open",
+    "linux": "xdg-open",
 }
 
-// var Version = "0.1.0"
-
-// Open calls the OS default program for uri
-func Open(uri string) error {
-    run, ok := commands[runtime.GOOS]
+func Open(url string) error {
+    command , ok := CMDS[runtime.GOOS]
     if !ok {
-        return fmt.Errorf("don't know how to open things on %s platform", runtime.GOOS)
+        fmt.Errorf("don't know how to open browser on %s platform", runtime.GOOS)
     }
-
-    cmd := exec.Command(run, uri)
+    cmd := exec.Command(command, url)
     return cmd.Start()
 }
 
 func main() {
     Open("http://baidu.com")
 }
+
