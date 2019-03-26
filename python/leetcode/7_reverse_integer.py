@@ -4,7 +4,6 @@
 # Description: 整数翻转
 
 '''
-
 给出一个 32 位的有符号整数，你需要将这个整数中每位上的数字进行反转。
 
 示例 1:
@@ -27,7 +26,7 @@
 '''
 
 import unittest
-import time
+import utils
 
 MAX = 2 ** 31 - 1
 MIN = -2 ** 31
@@ -35,6 +34,7 @@ MIN = -2 ** 31
 # 这是最简单的字符串翻转 平均 40 ms
 def reverse1(x):
     """
+    先转换字符串、在循环倒装，最后转为 int
     :type x: int
     :rtype: int
     """
@@ -61,26 +61,30 @@ def reverse1(x):
 
 MAX_R = (MAX - 7) // 10
 MIN_R = (MIN - -8) // 10
-'''使用数学的方式进行翻转，原理是除以 10 取余，推到前面，
-需要注意的是 Python 中 // 会四舍五入 平均 36 ms'''
+
 def reverse2(x):
     """
+    使用取余的方式，弹出 x 的最后一位，并推到 r 的后面，并如此往复，直到 x = 0
     :type x: int
     :rtype: int
     """
-    rev = 0
+    r = 0
     while x != 0:
         chu = 10
-        if x < 0:
+        if x < 0:           # 根据整数的正负，使用相应的取余除数
             chu = -10
-        pre = x % chu
-        x = (x - pre) // 10
-        if rev > MAX_R or (rev == MAX_R and pre == 7):
+        pre = x % chu       # 弹出 x 的最后一位
+        x = (x - pre) // 10 # 取余完毕后，整数减去一位
+        if r > MAX_R or (r == MAX_R and pre == 7):
+            # MAX_R = 2147483640
+            # 此处防止后续推入 pre 时，整数溢出
             return 0
-        if rev < MIN_R or (rev == MIN_R and pre == -8):
+        if r < MIN_R or (r == MIN_R and pre == -8):
+            # MIN_R = -2147483648
+            # 此处防止后续推入 pre 时，整数溢出
             return 0
-        rev = rev * 10 + pre
-    return rev
+        r = r * 10 + pre    # 将弹出的最后一位，推到 r 的后面
+    return r
 
 class TestMain(unittest.TestCase):
 
@@ -100,21 +104,16 @@ class TestMain(unittest.TestCase):
         self.assertEqual(reverse2(-1563847412), 0)
         self.assertEqual(reverse2(0), 0)
 
-def func_time(func, *args):
+def func_time(count, func, **kw):
     b = time.clock()
-    count = 1000
     for i in range(count):
-        func(*args)
-    print(time.clock() - b)
+        func(**kw)
+    print(func.__name__, 'run {} times used {}s'.format(count, time.clock() -b ))
 
 if __name__ == "__main__":
-    #  s = Solution()
-    #  print(s.reverse(123) == 321)
-    #  print(s.reverse(-123) == -321)
-    #  print(s.reverse(-12300) == -321)
-    #  print(s.reverse(0) == 0)
-    #  print(s.reverse(1534236469) == 0)
-    #  print(s.reverse(-1563847412) == 0)
-    #  func_time(reverse2, 1534236469)
-    #  func_time(reverse1, 1534236469)
+    count = 10000
+    #  utils.print_func_run_time(count, reverse1, x=1534236469)
+    #  utils.print_func_run_time(count, reverse2, x=1534236469)
+    utils.print_func_run_time(count, reverse1, x=123000)
+    utils.print_func_run_time(count, reverse2, x=123000)
     unittest.main()
