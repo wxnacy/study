@@ -112,8 +112,6 @@ def func_time(count, func, **kw):
 
 if __name__ == "__main__":
     count = 10000
-    #  utils.print_func_run_time(count, reverse1, x=1534236469)
-    #  utils.print_func_run_time(count, reverse2, x=1534236469)
     utils.print_func_run_time(count, reverse1, x=123000)
     utils.print_func_run_time(count, reverse2, x=123000)
     unittest.main()

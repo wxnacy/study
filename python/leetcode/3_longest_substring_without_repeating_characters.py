@@ -26,25 +26,24 @@
 
 # 遍历一次，逐个对比当前字母是否出现在前面的字符串中，如果有，从存在处的坐标重
 # 新开始计算 平均 96 秒 偏慢
-#  class Solution(object):
-    #  def lengthOfLongestSubstring(self, s):
-        #  """
-        #  :type s: str
-        #  :rtype: int
-        #  """
-        #  s1 = ""
-        #  count = 0
-        #  max_count = 0
-        #  for a in s:
-            #  if a not in s1:
-                #  s1 += a
-                #  count += 1
-            #  else:
-                #  if count > max_count:
-                    #  max_count = count
-                #  s1 = s1[s1.index(a, 0, len(s1)) + 1:] + a
-                #  count = len(s1)
-        #  return max_count if max_count > count else count
+def lengthOfLongestSubstring1(s):
+    """
+    :type s: str
+    :rtype: int
+    """
+    s1 = ""
+    count = 0
+    max_count = 0
+    for a in s:
+        if a not in s1:
+            s1 += a
+            count += 1
+        else:
+            if count > max_count:
+                max_count = count
+            s1 = s1[s1.index(a, 0, len(s1)) + 1:] + a
+            count = len(s1)
+    return max_count if max_count > count else count
 
 #  class Solution(object):
     #  def lengthOfLongestSubstring(self, s):
@@ -69,29 +68,55 @@
                 #  i += 1
         #  return max_count
 
-class Solution(object):
-    def lengthOfLongestSubstring(self, s):
-        """
-        :type s: str
-        :rtype: int
-        """
-        str_index = {}
-        i = 0
-        length = 0
-        for j in range(len(s)):
-            js = s[j]
-            if js in str_index:
-                i = max(i, str_index[js] + 1)
-            length = max(length, j - i + 1)
-            str_index[js] = j
-        return length
+def lengthOfLongestSubstring2(s):
+    """
+    :type s: str
+    :rtype: int
+    """
+    str_index = {}
+    i = 0
+    length = 0
+    for j in range(len(s)):
+        js = s[j]
+        if js in str_index:
+            i = max(i, str_index[js] + 1)
+        length = max(length, j - i + 1)
+        str_index[js] = j
+    return length
+
+
+import unittest
+import utils
+
+
+class TestMain(unittest.TestCase):
+
+    def setUp(self):
+        '''before each test function'''
+        pass
+
+    def tearDown(self):
+        '''after each test function'''
+        pass
+
+    def do(self, func):
+        self.assertEqual(func("adbabcbb"), 3)
+        self.assertEqual(func("bbbbb"), 1)
+        self.assertEqual(func("pwwkew"), 3)
+        self.assertEqual(func(" "), 1)
+        self.assertEqual(func("aab"), 2)
+        self.assertEqual(func("dvdf"), 3)
+        self.assertEqual(func("aabaab!bb"), 3)
+
+    def test_func1(self):
+        self.do(lengthOfLongestSubstring1)
+
+    def test_func2(self):
+        self.do(lengthOfLongestSubstring2)
 
 if __name__ == "__main__":
-    s = Solution()
-    print(s.lengthOfLongestSubstring("abcabcbb") == 3)
-    print(s.lengthOfLongestSubstring("bbbbb") == 1)
-    print(s.lengthOfLongestSubstring("pwwkew") == 3)
-    print(s.lengthOfLongestSubstring(" ") == 1)
-    print(s.lengthOfLongestSubstring("aab") == 2)
-    print(s.lengthOfLongestSubstring("dvdf") == 3)
-    print(s.lengthOfLongestSubstring("aabaab!bb") == 3)
+    count = 10000
+    utils.print_func_run_time(count, lengthOfLongestSubstring1, s = "aabaab!bb")
+    utils.print_func_run_time(count, lengthOfLongestSubstring2, s = "aabaab!bb")
+    unittest.main()
+
