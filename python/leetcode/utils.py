@@ -9,7 +9,9 @@ def print_func_run_time(count, func, **kw):
     b = timeit.default_timer()
     for i in range(count):
         func(**kw)
-    print(func.__name__, 'run {} times used {}s'.format(count,
+    print('{} run {} times used {}s'.format(
+        func.__name__.ljust(20),
+        count,
         timeit.default_timer() -b ))
 
 if __name__ == "__main__":
