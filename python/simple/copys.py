@@ -16,6 +16,7 @@ import shutil
 import shlex
 import subprocess
 import os
+import timeit
 
 SOURCE_FILE = '/tmp/test.sh'
 TARGET_DIR = '/tmp/tmp'
@@ -77,7 +78,22 @@ if __name__ == "__main__":
     # 赋予执行权限
     p = subprocess.Popen(shlex.split("chmod +x {}".format(SOURCE_FILE)))
     p.wait()
-    copy_file()
-    copy()
-    popen()
+    #  copy_file()
+    #  copy()
+    #  popen()
+
+    times = 100
+    b = timeit.default_timer()
+    for i in range(times):
+        copy()
+    print('copy time ', timeit.default_timer() - b)
+
+    b = timeit.default_timer()
+    for i in range(times):
+        popen()
+    print('popen time ', timeit.default_timer() - b)
+
+#  copy time  0.05435775099613238
+#  popen time  0.3895178400052828
+
 
