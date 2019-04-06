@@ -52,6 +52,16 @@ def copy():
     shutil.copy(SOURCE_FILE, target_file)
     shutil.copy(target_file, TARGET_DIR)
 
+def copy2():
+    '''
+    shutil.copy2() 类似于 copy() 方法，另外增加了获取元数据中添加的访问和修改时间
+
+    -rwxr-xr-x  1 wxnacy  wheel     90 Apr  6 19:05 test.sh
+    -rwxr-xr-x  1 wxnacy  wheel     90 Apr  6 19:09 test_copy2.sh
+    '''
+    target_file = '/tmp/test_copy2.sh'
+    shutil.copy2(SOURCE_FILE, target_file)
+    shutil.copy2(target_file, TARGET_DIR)
 
 def popen():
     '''
@@ -64,7 +74,7 @@ def popen():
     '''
     cmds = shlex.split("cp {} /tmp/test_popen.sh".format(SOURCE_FILE))
     p = subprocess.Popen(cmds)
-    p.wait()
+    p.communicate()
 
 if __name__ == "__main__":
     # 创建源文件
@@ -79,10 +89,16 @@ if __name__ == "__main__":
     p = subprocess.Popen(shlex.split("chmod +x {}".format(SOURCE_FILE)))
     p.wait()
     #  copy_file()
-    #  copy()
-    #  popen()
+    copy()
+    copy2()
+    popen()
 
     times = 100
+    b = timeit.default_timer()
+    for i in range(times):
+        copy_file()
+    print('copy_file time ', timeit.default_timer() - b)
+
     b = timeit.default_timer()
     for i in range(times):
         copy()
@@ -90,10 +106,17 @@ if __name__ == "__main__":
 
     b = timeit.default_timer()
     for i in range(times):
+        copy2()
+    print('copy2 time ', timeit.default_timer() - b)
+
+    b = timeit.default_timer()
+    for i in range(times):
         popen()
     print('popen time ', timeit.default_timer() - b)
 
-#  copy time  0.05435775099613238
-#  popen time  0.3895178400052828
 
+# copy_file time    0.022215532000000003
+# copy time         0.059561121999999994
+# copy2 time        0.07728823600000001
+# popen time        0.37018151000000005
 
