@@ -8,7 +8,7 @@ import time
 
 
 def get_progress(progress, total):
-    '''打印进度条'''
+    '''获取进度条'''
     progress_ratio = progress / total
     progress_len = 20
     progress_num = int(progress_ratio * 20)
@@ -17,6 +17,7 @@ def get_progress(progress, total):
     return pro_text
 
 def print_progress(total):
+    '''模拟打印进度条'''
     progress = 0
     step = 30
     while progress < total:
