@@ -11,6 +11,7 @@
     - [使用 watch 完成秒杀活动防止超卖 demo](https://github.com/wxnacy/study/blob/master/python/redis_demo/README.md#%E4%BD%BF%E7%94%A8-watch-%E5%AE%8C%E6%88%90%E7%A7%92%E6%9D%80%E6%B4%BB%E5%8A%A8%E9%98%B2%E6%AD%A2%E8%B6%85%E5%8D%96-demo)
 - [gevent](https://github.com/wxnacy/study/tree/master/python/gevent_demo) 基于 libev 的协程并发库。
 - [复制文件的几种方式](https://github.com/wxnacy/study/blob/master/python/simple/copys.py)
+- [不换行进度条](https://github.com/wxnacy/study/blob/master/python/simple/single_line_progress.py)
 
 ## Go
 
