@@ -26,4 +26,4 @@ if __name__ == "__main__":
     inprogress = 0
     while inprogress < total:
         inprogress = fanye(inprogress)
-    
+
