@@ -12,11 +12,12 @@
 - [gevent](https://github.com/wxnacy/study/tree/master/python/gevent_demo) 基于 libev 的协程并发库。
 - [复制文件的几种方式](https://github.com/wxnacy/study/blob/master/python/simple/copys.py)
 - [不换行进度条](https://github.com/wxnacy/study/blob/master/python/simple/single_line_progress.py)
+- [屏幕打印带颜色文字](https://github.com/wxnacy/study/blob/master/python/simple/colors.py)
 
 ## Go
 
 - [管道输入](https://github.com/wxnacy/study/blob/master/goland/src/args/stdin.go)
-- [屏幕打印带颜色](https://github.com/wxnacy/study/blob/master/goland/src/color/main.go)
+- [屏幕打印带颜色文字](https://github.com/wxnacy/study/blob/master/goland/src/color/main.go)
 - 数据库操作
     - [Mysql](https://github.com/wxnacy/study/blob/master/goland/src/db/mysql.go)
 - 不换行进度
