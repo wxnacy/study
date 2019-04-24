@@ -13,6 +13,8 @@
 - [复制文件的几种方式](https://github.com/wxnacy/study/blob/master/python/simple/copys.py)
 - [不换行进度条](https://github.com/wxnacy/study/blob/master/python/simple/single_line_progress.py)
 - [屏幕打印带颜色文字](https://github.com/wxnacy/study/blob/master/python/simple/colors.py)
+- 爬虫
+    - [屏幕打印带颜色文字](https://github.com/wxnacy/study/blob/master/python/simple/colors.py)
 
 ## Go
 
