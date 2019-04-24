@@ -14,7 +14,7 @@
 - [不换行进度条](https://github.com/wxnacy/study/blob/master/python/simple/single_line_progress.py)
 - [屏幕打印带颜色文字](https://github.com/wxnacy/study/blob/master/python/simple/colors.py)
 - 爬虫
-    - [屏幕打印带颜色文字](https://github.com/wxnacy/study/blob/master/python/simple/colors.py)
+    - [yelp](https://github.com/wxnacy/study/blob/master/python/crawler/yelp.py)
 
 ## Go
 
