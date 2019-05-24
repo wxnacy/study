@@ -4,6 +4,7 @@
 # Description: 合并两个有序链表
 # 难度 简单
 '''
+https://leetcode-cn.com/problems/merge-two-sorted-lists/solution/
 将两个有序链表合并为一个新的有序链表并返回。新链表是通过拼接给定的两个链表的所有节点组成的。
 
 示例：
@@ -60,7 +61,23 @@ def mergeTwoLists(l1: ListNode, l2: ListNode) -> ListNode:
         l2 = l2.next if l2 else None
     return l3.next
 
+
 def mergeTwoLists1(l1: ListNode, l2: ListNode) -> ListNode:
+    '''使用回调来处理，时间并没有比循环单次更快，并且容易引发内存泄露，所以不推荐'''
+    if not l1:
+        return l2
+    if not l2:
+        return l1
+    l3 = None
+    if l1.val <= l2.val:
+        l3 = ListNode(l1.val)
+        l3.next = mergeTwoLists2(l1.next, l2)
+    else:
+        l3 = ListNode(l2.val)
+        l3.next = mergeTwoLists2(l1, l2.next)
+    return l3
+
+def mergeTwoLists2(l1: ListNode, l2: ListNode) -> ListNode:
     '''只循环最短的次数，时间复杂度 O(n)'''
     l3 = ListNode(0)
     l4 = l3
@@ -86,20 +103,38 @@ def mergeTwoLists1(l1: ListNode, l2: ListNode) -> ListNode:
         l4.next = l2
     return l3.next
 
-def mergeTwoLists2(l1: ListNode, l2: ListNode) -> ListNode:
-    '''使用回调来处理，时间并没有比循环单次更快，并且容易引发内存泄露，所以不推荐'''
-    if not l1:
-        return l2
-    if not l2:
-        return l1
-    l3 = None
-    if l1.val <= l2.val:
-        l3 = ListNode(l1.val)
-        l3.next = mergeTwoLists2(l1.next, l2)
+def mergeTwoLists3(l1: ListNode, l2: ListNode) -> ListNode:
+    '''只循环最短的次数，时间复杂度 O(n)'''
+    l3 = ListNode(0)
+    l4 = l3
+    l = [0, 0]
+    for i in range(len(l)):
+        if not l1 or not l2:
+            break
+        if l1.val < l2.val:
+            l4.next = ListNode(l1.val)
+            l4 = l4.next
+            l1 = l1.next
+            l.append(0)
+        elif l1.val > l2.val:
+            l4.next = ListNode(l2.val)
+            l4 = l4.next
+            l2 = l2.next
+            l.append(0)
+        else:
+            l4.next = ListNode(l1.val)
+            l4 = l4.next
+            l4.next = ListNode(l2.val)
+            l4 = l4.next
+            l2 = l2.next
+            l1 = l1.next
+            l.append(0)
+            l.append(0)
+    if l1:
+        l4.next = l1
     else:
-        l3 = ListNode(l2.val)
-        l3.next = mergeTwoLists2(l1, l2.next)
-    return l3
+        l4.next = l2
+    return l3.next
 
 class TestMain(unittest.TestCase):
 
@@ -145,6 +180,7 @@ class TestMain(unittest.TestCase):
         self.do(mergeTwoLists)
         self.do(mergeTwoLists1)
         self.do(mergeTwoLists2)
+        self.do(mergeTwoLists3)
 
 if __name__ == "__main__":
     count = 10000
@@ -153,6 +189,8 @@ if __name__ == "__main__":
     utils.print_func_run_time(count, mergeTwoLists1,
         l1 = makeListNode([2, 3, 4, 7, 8, 9]), l2 = makeListNode([4, 5]))
     utils.print_func_run_time(count, mergeTwoLists2,
+        l1 = makeListNode([2, 3, 4, 7, 8, 9]), l2 = makeListNode([4, 5]))
+    utils.print_func_run_time(count, mergeTwoLists3,
         l1 = makeListNode([2, 3, 4, 7, 8, 9]), l2 = makeListNode([4, 5]))
     unittest.main()
 
