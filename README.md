@@ -15,6 +15,7 @@
 - [屏幕打印带颜色文字](https://github.com/wxnacy/study/blob/master/python/simple/colors.py)
 - 爬虫
     - [yelp](https://github.com/wxnacy/study/blob/master/python/crawler/yelp.py)
+- [LeetCode 刷题集](https://github.com/wxnacy/study/blob/master/python/leetcode/README.md)
 
 ## Go
 
