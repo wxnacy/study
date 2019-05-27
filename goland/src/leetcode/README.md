@@ -6,7 +6,7 @@
 
 ## Demo 目录
 
-<!-- - [1. 两数之和](1-two-sum.py) -->
-<!-- - [2. 两数相加](2-add-two-numbers.py) -->
+- [1. 两数之和](1-two-sum_test.go)
+- [2. 两数相加](2-add-two-numbers_test.go)
 <!-- - [3. 无重复字符的最长子串](3-longest-substring-without-repeating-characters.py) -->
 - [7. 整数翻转](7-reverse-integer_test.go)
