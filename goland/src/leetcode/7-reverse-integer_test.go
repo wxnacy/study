@@ -7,6 +7,7 @@ import (
     "math"
 )
 
+// 取余、弹出、推入
 // 执行用时 : 0 ms, 在Reverse Integer的Go提交中击败了100.00% 的用户
 // 内存消耗 : 2.2 MB, 在Reverse Integer的Go提交中击败了33.94% 的用户
 func reverse(x int) int {
