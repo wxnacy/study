@@ -14,8 +14,10 @@
 - [不换行进度条](https://github.com/wxnacy/study/blob/master/python/simple/single_line_progress.py)
 - [屏幕打印带颜色文字](https://github.com/wxnacy/study/blob/master/python/simple/colors.py)
 - 爬虫
-    - [yelp](https://github.com/wxnacy/study/blob/master/python/crawler/yelp.py)
+    - [Yelp](https://github.com/wxnacy/study/blob/master/python/crawler/yelp.py)
 - [LeetCode 刷题集](https://github.com/wxnacy/study/blob/master/python/leetcode/README.md)
+- Flask
+    - [Flask-Cache](https://github.com/wxnacy/study/tree/master/python/flask_cache_demo)
 
 ## Go
 
