@@ -136,6 +136,7 @@ crawler/common
 
 # for jetbrain
 */*.iml
+*.iml
 
 # for other
 */winn/*

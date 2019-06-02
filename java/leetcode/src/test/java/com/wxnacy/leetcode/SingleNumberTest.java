@@ -4,6 +4,12 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Set;
+
+
 /**
  * 只出现一次的数字
  * 本题分析文章详见 https://wxnacy.com/leetcode/problems/136-single-number/
@@ -15,8 +21,15 @@ public class SingleNumberTest
     {
         int[] nums = {4, 1, 2, 1, 2};
         assertEquals(singleNumber(nums), 4);
-        int[] nums = {2, 2, 1};
-        assertEquals(singleNumber(nums), 1);
+
+        Map<Integer, int[]> m = new HashMap();
+        m.put(1, new int[]{2, 2, 1});
+        m.put(4, new int[]{4, 1, 2, 1, 2});
+        Set<Map.Entry<Integer, int[]>> sets = m.entrySet();
+        for (Map.Entry<Integer, int[]> set : sets) {
+            Integer n = singleNumber(set.getValue());
+            assertEquals(set.getKey(), n);
+        }
 
     }
 
