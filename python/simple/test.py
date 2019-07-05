@@ -7,6 +7,7 @@ import json
 import requests
 import os
 import subprocess
+import bisect
 
 download_path = "/Users/wxnacy/Downloads/girls/"
 album_file = "/Users/wxnacy/PycharmProjects/study/python/scrapy_demo/first/album_neidi.json"
@@ -54,17 +55,43 @@ def download_album(item):
             print(e)
             continue
 
-        
+
+
+import bisect
+
+def binary_search(nums, n):
+    i = bisect.bisect_left(nums, n)
+    if i >= len(nums):
+        return -1
+    else:
+        if nums[i] == n:
+            return i
+        else:
+            return -1
+
+import unittest
+
+class TestMain(unittest.TestCase):
+
+    def setUp(self):
+        '''before each test function'''
+        pass
+
+    def tearDown(self):
+        '''after each test function'''
+        pass
+
+    def do(self, func):
+        '''todo'''
+        self.assertEqual(1, 1)
+        pass
+
+    def test_bs(self):
+        a = [1, 4, 4, 5, 6]
+        self.assertEqual(binary_search(a, 3), -1)
+        self.assertEqual(binary_search(a, 8), -1)
+        self.assertEqual(binary_search(a, 4), 1)
 
 
 if __name__ == "__main__":
-    with open(album_file) as f :
-        text = f.read()
-        data = json.loads(text)
-        #  data.sort()
-        data.reverse()
-        for i in data:
-            print(i)
-            download_album(i)
-
-
+    unittest.main()

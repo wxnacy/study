@@ -26,18 +26,41 @@ class Solution:
             if n in m:
                 return [m[n], i]
             m[nums[i]] = i
-        return [-1, -1]
+        return [0, 0]
 
     def threeSum(self, nums: 'List[int]') -> 'List[List[int]]':
+        '''
+执行用时 : 1208 ms, 在3Sum的Python3提交中击败了58.01% 的用户
+内存消耗 : 16.6 MB, 在3Sum的Python3提交中击败了93.52% 的用户
+        '''
         res = []
-        for i in range(len(nums) - 2):
-            target = 0 - nums[i]
-            i1, i2 = self.twoSum(nums[i + 1:], target)
-            if i1 > -1:
-                i1 += i + 1
-                i2 += i + 1
-                print(i, i1, i2)
-                res.append([nums[i], nums[i1], nums[i2]])
+        if not nums:
+            return res
+        nums.sort()
+        if ( nums[0] > 0 and nums[-1] > 0 ) or ( nums[0] < 0 and nums[-1] < 0):
+            return res
+        length = len(nums)
+        last_begin = nums[0]
+        for i in range(length - 2):
+            if nums[i] > 0:
+                break
+            if i > 0 and nums[i] == last_begin:
+                continue
+            last_begin = nums[i]
+            left = i + 1
+            right = length - 1
+            while left < right:
+                _sum = nums[i] + nums[left] + nums[right]
+                if _sum == 0:
+                    res.append([nums[i], nums[left], nums[right]])
+                if _sum <= 0:
+                    left += 1
+                    while left < right and nums[left] == nums[left - 1]:
+                        left += 1
+                else:
+                    right -= 1
+                    while left < right and  nums[right + 1] == nums[right]:
+                        right -=1
         return res
 
 import unittest
@@ -56,17 +79,10 @@ class TestMain(unittest.TestCase):
 
     def do(self, func):
         nums = [-1, 0, 1, 2, -1, -4]
-        res = [ [-1, 0, 1], [-1, -1, 2] ]
+        res = [ [-1, -1, 2],[-1, 0, 1]  ]
         self.assertEqual(func(nums), res)
-        #  nums = [-1, 0, 1]
-        #  res = [ [-1, 0, 1]]
-        #  self.assertEqual(func(nums), res)
-        #  nums = [-1, 0]
-        #  res = [[]]
-        #  self.assertEqual(nums, res)
-        #  nums = [-1, 0, 1, -1, 0, 1]
-        #  res = [ [-1, 0, 1]]
-        #  self.assertEqual(func(nums), res)
+        self.assertEqual(func([]), [])
+        self.assertEqual(func([0, 0, 0, 0]), [[0, 0, 0]])
 
     def test_func(self):
         self.do(s.threeSum)

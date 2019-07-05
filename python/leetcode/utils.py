@@ -15,6 +15,26 @@ def print_func_run_time(count, func, **kw):
         count,
         timeit.default_timer() -b ))
 
+
+#  CLOCK_FMT = '[{T:0.8f}s] {F}({A}, {K}) -> {R}'
+CLOCK_FMT = '[{T:0.8f}s] {F}() -> {R}'
+def clock(times=1, fmt=CLOCK_FMT, logger_func=print):
+    def clock_wraper(func):
+        def _wraper(*args, **kwargs):
+            t0 = timeit.default_timer()
+            result = None
+            for i in range(times):
+                result = func(*args, **kwargs)
+            T = timeit.default_timer() - t0
+            F = func.__name__
+            A = args
+            K = kwargs
+            R = repr(result)
+            logger_func(fmt.format(**locals()))
+            return result
+        return _wraper
+    return clock_wraper
+
 #  def print_func_run_time1(count, func, *args):
     #  b = timeit.default_timer()
     #  for i in range(count):

@@ -1,16 +1,20 @@
 #!/usr/bin/env python
 # -*- coding:utf-8 -*-
 # Author: wxnacy(wxnacy@gmail.com)
-# Description: 冒泡排序
+# Description:
 
+import time
+import random
 import utils
 
-def bubble_sort(nums: list):
-    length = len(nums)
-    for i in range(length):
-        for j in range(i + 1, length):
-            if nums[i] > nums[j]:
-                nums[i], nums[j] = nums[j], nums[i]
+def insertion_sort(nums: list):
+    for i in range(1, len(nums)):
+        current = nums[i]
+        prefix = i - 1
+        while prefix >= 0 and nums[prefix] > current:
+            nums[prefix + 1] = nums[prefix]
+            prefix -= 1
+        nums[prefix + 1] = current
 
 import unittest
 
@@ -26,12 +30,12 @@ class TestMain(unittest.TestCase):
 
     def do(self, func):
         '''todo'''
-        for k, v in utils.randoms:
+        for k, v in utils.generate_randoms():
             func(k)
             self.assertEqual(k, v)
 
     def test_func(self):
-        self.do(bubble_sort)
+        self.do(insertion_sort)
 
 if __name__ == "__main__":
     unittest.main()

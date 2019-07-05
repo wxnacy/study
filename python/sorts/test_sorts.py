@@ -1,18 +1,11 @@
 #!/usr/bin/env python
 # -*- coding:utf-8 -*-
 # Author: wxnacy(wxnacy@gmail.com)
-# Description: 冒泡排序
-
-import utils
-
-def bubble_sort(nums: list):
-    length = len(nums)
-    for i in range(length):
-        for j in range(i + 1, length):
-            if nums[i] > nums[j]:
-                nums[i], nums[j] = nums[j], nums[i]
+# Description:
 
 import unittest
+import utils
+import quick_sort
 
 class TestMain(unittest.TestCase):
 
@@ -31,7 +24,8 @@ class TestMain(unittest.TestCase):
             self.assertEqual(k, v)
 
     def test_func(self):
-        self.do(bubble_sort)
+        self.do(quick_sort.quick_sort)
 
 if __name__ == "__main__":
     unittest.main()
+    print(randoms)

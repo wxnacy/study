@@ -1,16 +1,21 @@
 #!/usr/bin/env python
 # -*- coding:utf-8 -*-
 # Author: wxnacy(wxnacy@gmail.com)
-# Description: 冒泡排序
+# Description:
 
+import time
+import random
 import utils
 
-def bubble_sort(nums: list):
-    length = len(nums)
-    for i in range(length):
-        for j in range(i + 1, length):
-            if nums[i] > nums[j]:
-                nums[i], nums[j] = nums[j], nums[i]
+def selection_sort(nums: list):
+    for i in range(len(nums) - 1):
+        min_index = i
+        for j in range(i + 1, len(nums)):
+            if nums[j] < nums[min_index]:
+                min_index = j
+
+        if min_index != i:
+            nums[i], nums[min_index] = nums[min_index], nums[i]
 
 import unittest
 
@@ -26,12 +31,12 @@ class TestMain(unittest.TestCase):
 
     def do(self, func):
         '''todo'''
-        for k, v in utils.randoms:
+        for k, v in utils.generate_randoms():
             func(k)
             self.assertEqual(k, v)
 
     def test_func(self):
-        self.do(bubble_sort)
+        self.do(selection_sort)
 
 if __name__ == "__main__":
     unittest.main()

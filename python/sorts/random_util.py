@@ -5,13 +5,12 @@
 
 import random
 
-
 def rand_int_arr(length):
-    arr = []
-    for i in range(length):
-        r = random.randrange(1000)
-        arr.append(r)
-    return arr
+    #  arr = []
+    #  for i in range(length):
+        #  r = random.randrange(1000)
+        #  arr.append(r)
+    return [random.randint(1, 1000) for i in range(length)]
 
 if __name__ == "__main__":
     arr = rand_int_arr(10)

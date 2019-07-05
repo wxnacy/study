@@ -68,6 +68,20 @@ def redis3():
     key=redis_cache_/redis3-133156838395276
     '''
     return jsonify({"num": random.randint(1, 100)})
+
+@app.route('/redis4')
+def redis4():
+    '''
+    自定义 key
+    key=redis_cache_/redis3-133156838395276
+    '''
+    return jsonify(redis4_data())
+
+@cache.cached(timeout = 60)
+def redis4_data():
+    return {"num": random.randint(1, 100)}
+
+
 if __name__ == "__main__":
     app.run(debug=True)
 
