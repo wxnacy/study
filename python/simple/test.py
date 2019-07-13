@@ -94,4 +94,6 @@ class TestMain(unittest.TestCase):
 
 
 if __name__ == "__main__":
+    print(__builtins__.__dict__)
     unittest.main()
+

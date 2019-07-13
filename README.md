@@ -19,6 +19,8 @@
 - Flask
     - [Flask-Cache](https://github.com/wxnacy/study/tree/master/python/flask_cache_demo)
 - [发送邮件](https://github.com/wxnacy/study/blob/master/python/email_demo/myemail.py)
+- 内置模块
+    - [json](https://github.com/wxnacy/study/tree/master/python/builtin_module/jsons)
 
 ## Go
 
