@@ -21,3 +21,9 @@ $ python run.py
 ```bash
 $ celery worker -A run.celery -l info
 ```
+
+**请求包含后台任务的接口**
+
+```bash
+$ curl http://127.0.0.1:5000/hello/celery
+```

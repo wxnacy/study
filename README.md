@@ -16,12 +16,13 @@
 - 爬虫
     - [Yelp](https://github.com/wxnacy/study/blob/master/python/crawler/yelp.py)
 - [LeetCode 刷题集](https://github.com/wxnacy/study/blob/master/python/leetcode/README.md)
-- Flask
-    - [Flask-Cache](https://github.com/wxnacy/study/tree/master/python/flask_cache_demo)
 - [发送邮件](https://github.com/wxnacy/study/blob/master/python/email_demo/myemail.py)
 - 内置模块
     - [json](https://github.com/wxnacy/study/tree/master/python/builtin_module/jsons)
     - [dict](https://github.com/wxnacy/study/tree/master/python/builtin_module/dicts)
+- Flask
+    - [Flask-Cache](https://github.com/wxnacy/study/tree/master/python/flask_cache_demo)
+- [Celery](https://github.com/wxnacy/study/tree/master/python/celerys) Celery 是一个 Python 的任务队列，包含线程/进程池。
 
 ## Go
 
