@@ -21,6 +21,7 @@
 - [发送邮件](https://github.com/wxnacy/study/blob/master/python/email_demo/myemail.py)
 - 内置模块
     - [json](https://github.com/wxnacy/study/tree/master/python/builtin_module/jsons)
+    - [dict](https://github.com/wxnacy/study/tree/master/python/builtin_module/dicts)
 
 ## Go
 
