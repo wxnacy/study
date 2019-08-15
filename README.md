@@ -27,6 +27,10 @@
 - list
     - [使用多属性排序](https://github.com/wxnacy/study/blob/master/python/office_module/list_demo/sort_by_multi_fields.py)
 
+### Pillow 模块
+
+- [图片叠加](https://github.com/wxnacy/study/blob/master/python/pillow_demo/overlay.py)
+
 ## Go
 
 - [管道输入](https://github.com/wxnacy/study/blob/master/goland/src/args/stdin.go)
