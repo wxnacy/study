@@ -29,6 +29,7 @@
 
 ### Pillow 模块
 
+- [文字水印](https://github.com/wxnacy/study/blob/master/python/pillow_demo/text_watermark.py)
 - [图片叠加](https://github.com/wxnacy/study/blob/master/python/pillow_demo/overlay.py)
 
 ## Go
