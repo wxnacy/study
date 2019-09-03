@@ -6,22 +6,26 @@
 
 from flask import Flask
 import time
+import os
+
 
 app = Flask(__name__)
 
 @app.route('/out5seconds')
 def out5seconds():
+    print(os.getpid())
     time.sleep(5)
     return 'Hello World'
 
 @app.route('/out11seconds')
 def out11seconds():
+    print(os.getpid())
     time.sleep(11)
     return 'Hello World'
 
 @app.route('/hello')
 def hello():
-    print('hello')
+    print(os.getpid())
     app.logger.info('Hello World')
     return 'Hello World'
 
