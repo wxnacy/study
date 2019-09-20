@@ -1,26 +1,20 @@
 #!/usr/bin/env python
 # -*- coding:utf-8 -*-
 # Author: wxnacy(wxnacy@gmail.com)
-# Description:
+# Description: 添加文字水印
 
 from overlay import get_image
 from overlay import image2bytes
 
-from PIL import Image
 from PIL import ImageDraw
 from PIL import ImageFont
 
-#  draw=ImageDraw.Draw(image)
-#  font=ImageFont.truetype('PingFang.ttc',40)
-#  draw.text((70,300),'This is wxnacy\'s website',(0,255,255), font=font)
-#  image.show()
-
 def add_watermark(image, text, position, color=(0, 0, 0), font=None):
+    '''给图片对象添加文字水印'''
     draw=ImageDraw.Draw(image)
     draw.text(position,text,color, font=font)
     image.show()
     return image2bytes(image)
-
 
 if __name__ == "__main__":
 

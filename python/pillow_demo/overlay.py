@@ -26,7 +26,7 @@ def image2bytes(image):
     return img_bytes.getvalue()
 
 def overlay(big_path, small_path, width, height, small_thumbnail=()):
-    '''叠加'''
+    '''图片叠加'''
     big_image = get_image(big_path)
     small_image = get_image(small_path)
     if small_thumbnail:
