@@ -34,7 +34,7 @@ PyMySQL == 0.7.9
 SQLAlchemy == 1.1.5
 
 # app/config.py: 14
-Werkzeug == 0.12.1
+Werkzeug == 0.15.3
 
 # app/common/elasticsearch.py: 8,9,10,11
 elasticsearch == 5.2.0
