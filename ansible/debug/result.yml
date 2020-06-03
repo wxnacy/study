@@ -1,0 +1,12 @@
+- hosts: wxnacytest
+  remote_user: root
+  tasks:
+  - name: Get path
+    shell: |
+        pwd
+    register: result
+  - name: Get debug info
+    debug: var=result verbosity=0
+
+# debug 输出 result
+# 输出结果 https://s1.ax1x.com/2020/06/03/tdMeXT.png
