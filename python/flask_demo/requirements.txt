@@ -8,7 +8,7 @@
 # app/views/api.py: 10
 # app/views/html.py: 12,13,14,15
 # app/views/test.py: 13,14,15,16,17
-Flask == 0.12
+Flask == 1.0
 
 # app/config.py: 11
 Flask_Cors == 3.0.2
