@@ -48,6 +48,10 @@
 - [打开系统浏览器](https://github.com/wxnacy/study/blob/master/goland/src/open_brower/main.go)
 - [LeetCode 刷题集](https://github.com/wxnacy/study/blob/master/goland/src/leetcode/README.md)
 
+## Ansible
+
+- [Debug](https://github.com/wxnacy/study/tree/master/ansible/debug)
+
 ## Java
 
 - [LeetCode 刷题集](https://github.com/wxnacy/study/blob/master/java/leetcode/README.md)
