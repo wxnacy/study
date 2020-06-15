@@ -8,7 +8,7 @@
     <name>SpringMVC-Mybatis Maven Webapp</name>
     <url>http://maven.apache.org</url>
     <properties>
-        <spring.version>4.0.1.RELEASE</spring.version>
+        <spring.version>5.2.7.RELEASE</spring.version>
     </properties>
     <dependencies>
         <!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
