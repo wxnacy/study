@@ -77,6 +77,11 @@ target/
 */target/
 # Jupyter Notebook
 .ipynb_checkpoints
+*/.ipynb_checkpoints/*
+
+# ossutil
+.ossutil_checkpoint
+*/.ossutil_checkpoint/*
 
 # pyenv
 .python-version
