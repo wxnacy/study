@@ -4,7 +4,7 @@
   "main": "main.js",
   "license": "MIT",
   "devDependencies": {
-    "electron": "^2.0.0",
+    "electron": "^9.1.0",
     "electron-builder": "^20.13.3"
   },
   "scripts":{
