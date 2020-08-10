@@ -24,6 +24,7 @@ HTML = """\
 import os
 import urllib.parse
 
+
 def main(dirname):
     for dirname, subdirs, files in os.walk(dirname):
         lines = ''

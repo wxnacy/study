@@ -13076,7 +13076,7 @@ div#notebook {
 
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 使用 sqlalchemy 进行数据库操作</span>
@@ -13394,6 +13394,177 @@ select(whereclause=None, **params) method of sqlalchemy.sql.schema.Table instanc
 
 <div class="output_text output_subarea output_execute_result">
 <pre>[(1, &#39;Daisy&#39;, 92)]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 查看 user 属性</span>
+<span class="nb">dir</span><span class="p">(</span><span class="n">user</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[3]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[&#39;__and__&#39;,
+ &#39;__bool__&#39;,
+ &#39;__class__&#39;,
+ &#39;__delattr__&#39;,
+ &#39;__dict__&#39;,
+ &#39;__dir__&#39;,
+ &#39;__doc__&#39;,
+ &#39;__eq__&#39;,
+ &#39;__format__&#39;,
+ &#39;__ge__&#39;,
+ &#39;__getattribute__&#39;,
+ &#39;__getstate__&#39;,
+ &#39;__gt__&#39;,
+ &#39;__hash__&#39;,
+ &#39;__init__&#39;,
+ &#39;__init_subclass__&#39;,
+ &#39;__invert__&#39;,
+ &#39;__le__&#39;,
+ &#39;__lt__&#39;,
+ &#39;__module__&#39;,
+ &#39;__ne__&#39;,
+ &#39;__new__&#39;,
+ &#39;__nonzero__&#39;,
+ &#39;__or__&#39;,
+ &#39;__reduce__&#39;,
+ &#39;__reduce_ex__&#39;,
+ &#39;__repr__&#39;,
+ &#39;__setattr__&#39;,
+ &#39;__sizeof__&#39;,
+ &#39;__str__&#39;,
+ &#39;__subclasshook__&#39;,
+ &#39;__visit_name__&#39;,
+ &#39;__weakref__&#39;,
+ &#39;_annotate&#39;,
+ &#39;_annotations&#39;,
+ &#39;_autoincrement_column&#39;,
+ &#39;_autoload&#39;,
+ &#39;_clone&#39;,
+ &#39;_cloned_set&#39;,
+ &#39;_cols_populated&#39;,
+ &#39;_columns&#39;,
+ &#39;_compiler&#39;,
+ &#39;_compiler_dispatch&#39;,
+ &#39;_constructor&#39;,
+ &#39;_copy_internals&#39;,
+ &#39;_deannotate&#39;,
+ &#39;_execute_on_connection&#39;,
+ &#39;_extra_dependencies&#39;,
+ &#39;_extra_kwargs&#39;,
+ &#39;_from_objects&#39;,
+ &#39;_hide_froms&#39;,
+ &#39;_init&#39;,
+ &#39;_init_collections&#39;,
+ &#39;_init_existing&#39;,
+ &#39;_init_items&#39;,
+ &#39;_is_clone_of&#39;,
+ &#39;_is_from_container&#39;,
+ &#39;_is_join&#39;,
+ &#39;_is_lateral&#39;,
+ &#39;_is_lexical_equivalent&#39;,
+ &#39;_is_select&#39;,
+ &#39;_kw_reg_for_dialect&#39;,
+ &#39;_kw_reg_for_dialect_cls&#39;,
+ &#39;_kw_registry&#39;,
+ &#39;_memoized_property&#39;,
+ &#39;_negate&#39;,
+ &#39;_order_by_label_element&#39;,
+ &#39;_params&#39;,
+ &#39;_populate_column_collection&#39;,
+ &#39;_prefixes&#39;,
+ &#39;_refresh_for_new_column&#39;,
+ &#39;_reset_exported&#39;,
+ &#39;_schema_item_copy&#39;,
+ &#39;_select_iterable&#39;,
+ &#39;_set_parent&#39;,
+ &#39;_set_parent_with_dispatch&#39;,
+ &#39;_sorted_constraints&#39;,
+ &#39;_textual&#39;,
+ &#39;_translate_schema&#39;,
+ &#39;_validate_dialect_kwargs&#39;,
+ &#39;_with_annotations&#39;,
+ &#39;add_is_dependent_on&#39;,
+ &#39;alias&#39;,
+ &#39;append_column&#39;,
+ &#39;append_constraint&#39;,
+ &#39;append_ddl_listener&#39;,
+ &#39;argument_for&#39;,
+ &#39;bind&#39;,
+ &#39;c&#39;,
+ &#39;columns&#39;,
+ &#39;comment&#39;,
+ &#39;compare&#39;,
+ &#39;compile&#39;,
+ &#39;constraints&#39;,
+ &#39;correspond_on_equivalents&#39;,
+ &#39;corresponding_column&#39;,
+ &#39;count&#39;,
+ &#39;create&#39;,
+ &#39;delete&#39;,
+ &#39;description&#39;,
+ &#39;dialect_kwargs&#39;,
+ &#39;dialect_options&#39;,
+ &#39;dispatch&#39;,
+ &#39;drop&#39;,
+ &#39;exists&#39;,
+ &#39;foreign_key_constraints&#39;,
+ &#39;foreign_keys&#39;,
+ &#39;fullname&#39;,
+ &#39;get_children&#39;,
+ &#39;implicit_returning&#39;,
+ &#39;indexes&#39;,
+ &#39;info&#39;,
+ &#39;insert&#39;,
+ &#39;is_clause_element&#39;,
+ &#39;is_derived_from&#39;,
+ &#39;is_selectable&#39;,
+ &#39;join&#39;,
+ &#39;key&#39;,
+ &#39;kwargs&#39;,
+ &#39;lateral&#39;,
+ &#39;metadata&#39;,
+ &#39;name&#39;,
+ &#39;named_with_column&#39;,
+ &#39;outerjoin&#39;,
+ &#39;params&#39;,
+ &#39;primary_key&#39;,
+ &#39;quote&#39;,
+ &#39;quote_schema&#39;,
+ &#39;replace_selectable&#39;,
+ &#39;schema&#39;,
+ &#39;select&#39;,
+ &#39;selectable&#39;,
+ &#39;self_group&#39;,
+ &#39;supports_execution&#39;,
+ &#39;tablesample&#39;,
+ &#39;tometadata&#39;,
+ &#39;unique_params&#39;,
+ &#39;update&#39;]</pre>
 </div>
 
 </div>

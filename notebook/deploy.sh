@@ -2,7 +2,8 @@
 # Author: wxnacy(wxnacy@gmail.com)
 # Description:
 
-ipynb_files=`find . -name "*.ipynb" | grep -v checkpoints`
+./convert.sh
+
 for file in `find static -name "*.html"`
 do
     outfile=`python -c "print('${file}'.replace('static/', ''))"`

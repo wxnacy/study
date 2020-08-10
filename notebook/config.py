@@ -4,3 +4,6 @@
 # Description:
 
 DATABASE_URL = 'mysql://root:wxnacy@127.0.0.1:3306/study?charset=utf8mb4'
+
+MAX = 2 ** 31 - 1
+MIN = -2 ** 31
