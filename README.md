@@ -20,6 +20,8 @@
 - Flask
     - [Flask-Cache](https://github.com/wxnacy/study/tree/master/python/flask_cache_demo)
 - [Celery](https://github.com/wxnacy/study/tree/master/python/celerys) Celery 是一个 Python 的任务队列，包含线程/进程池。
+- Chrome
+    - [打印书签列表](https://github.com/wxnacy/study/blob/master/python/simple/print_chrome_bookmarks.py)
 
 ### 内置模块
 - [json](https://github.com/wxnacy/study/tree/master/python/builtin_module/jsons)
