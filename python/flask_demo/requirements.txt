@@ -11,7 +11,7 @@
 Flask == 0.12
 
 # app/config.py: 11
-Flask_Cors == 3.0.2
+Flask_Cors == 3.0.9
 
 # app/config.py: 13
 # app/views/html.py: 16,17,18
