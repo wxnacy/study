@@ -40,7 +40,7 @@ Werkzeug == 0.12.1
 elasticsearch == 5.2.0
 
 # app/common/md.py: 9
-markdown2 == 2.3.4
+markdown2 == 2.4.0
 
 # app/common/md.py: 7
 mistune == 0.7.4
