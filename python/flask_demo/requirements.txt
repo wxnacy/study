@@ -43,7 +43,7 @@ elasticsearch == 5.2.0
 markdown2 == 2.3.4
 
 # app/common/md.py: 7
-mistune == 0.7.4
+mistune == 0.8.1
 
 # app/common/aliyun.py: 7
 # app/common/qiniu.py: 7
