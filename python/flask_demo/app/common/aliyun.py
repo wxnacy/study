@@ -9,15 +9,15 @@ import requests
 from datetime import date
 from datetime import datetime
 
-access_key = '9I1VpgURzvT6t7Zb'
-secret_key = 'JVXlHhYcZbFJ0cqLxJs9ySLo0IZuak'
+access_key = ''
+secret_key = ''
 endpoint = 'http://oss-cn-beijing.aliyuncs.com'
 BUCKET_IMG = 'img-easyjava-net'
 
 
 class OSSClient():
-    def __init__(self, access_key='9I1VpgURzvT6t7Zb',
-                 secret_key='JVXlHhYcZbFJ0cqLxJs9ySLo0IZuak'):
+    def __init__(self, access_key='',
+                 secret_key=''):
         self.auth = oss2.Auth(access_key, secret_key)
 
     def put_object(self, bucket_name, key, data, headers=None,

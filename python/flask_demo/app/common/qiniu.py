@@ -9,8 +9,8 @@ import requests
 from datetime import date
 from datetime import datetime
 
-access_key = '9I1VpgURzvT6t7Zb'
-secret_key = 'JVXlHhYcZbFJ0cqLxJs9ySLo0IZuak'
+access_key = ''
+secret_key = ''
 endpoint = 'http://oss-cn-beijing.aliyuncs.com'
 BUCKET_IMG = 'img-easyjava-net'
 
