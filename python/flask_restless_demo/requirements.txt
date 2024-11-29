@@ -3,7 +3,7 @@
 
 # proprecess.py: 6,7,8
 # simple.py: 6,7,8
-Flask == 0.12
+Flask == 1.0
 
 # proprecess.py: 10
 # simple.py: 10
